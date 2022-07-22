@@ -54,6 +54,7 @@ class Vehicle {
 	}
 }
 
-let inputData = fs.readFileSync(path.join(__dirname, './input.txt')).toString();
+const file = process.argv[2];
+let Data = fs.readFileSync(file).toString();
 let train1 = new Vehicle();
-train1.main(inputData);
+train1.main(Data);
